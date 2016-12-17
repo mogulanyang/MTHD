@@ -1,0 +1,26 @@
+//
+//  PrefixHeader.pch
+//  MTHD
+//
+//  Created by Orange Yu on 2016/12/17.
+//  Copyright © 2016年 Orange Yu. All rights reserved.
+//
+
+// #ifdef __OBJC__ 防止在工程中c、c++文件引入OC头文件的报错
+#ifdef __OBJC__
+//** 第三方库 */
+
+//** 分类 */
+#endif
+
+//** NSLog输出宏 */
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(...)
+#endif
+
+//** 全局颜色 */
+#define OYColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+//** 弱引用 */
+#define WeakSelf(vc) __weak typeof(vc *) weakSelf = self
