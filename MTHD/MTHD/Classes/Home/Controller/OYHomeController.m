@@ -14,18 +14,22 @@
 
 @implementation OYHomeController
 
+//MARK:- 初始化的时候设置flowLayout
+- (instancetype)init {
+    return [super initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc]init]];
+}
+
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
+    // 设置背景颜色
+    self.collectionView.backgroundColor = OYColor(222, 222, 222);
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
-    // Do any additional setup after loading the view.
+    
 }
 
 
