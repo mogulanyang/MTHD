@@ -11,6 +11,8 @@
 //** 第三方库 */
 
 //** 分类 */
+#import "UIView+OYCategory.h"
+
 #endif
 
 //** NSLog输出宏 */

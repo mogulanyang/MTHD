@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6488A2071E0685EE000F10E5 /* OYNaviLeftItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6488A2061E0685EE000F10E5 /* OYNaviLeftItemView.m */; };
 		64BB877E1E05512200F30A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BB877D1E05512200F30A6E /* main.m */; };
 		64BB87811E05512200F30A6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BB87801E05512200F30A6E /* AppDelegate.m */; };
 		64BB87891E05512200F30A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64BB87881E05512200F30A6E /* Assets.xcassets */; };
 		64BB87A21E05572200F30A6E /* OYNavitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BB87A11E05572200F30A6E /* OYNavitionController.m */; };
 		64BB87A51E05573D00F30A6E /* OYHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BB87A41E05573D00F30A6E /* OYHomeController.m */; };
+		64BB87A81E055E5300F30A6E /* UIView+OYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BB87A71E055E5300F30A6E /* UIView+OYCategory.m */; };
+		64BB87AB1E0568A400F30A6E /* UIBarButtonItem+OYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BB87AA1E0568A400F30A6E /* UIBarButtonItem+OYCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6488A2051E0685EE000F10E5 /* OYNaviLeftItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYNaviLeftItemView.h; sourceTree = "<group>"; };
+		6488A2061E0685EE000F10E5 /* OYNaviLeftItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYNaviLeftItemView.m; sourceTree = "<group>"; };
 		64BB87791E05512200F30A6E /* MTHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTHD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64BB877D1E05512200F30A6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		64BB877F1E05512200F30A6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +31,10 @@
 		64BB87A11E05572200F30A6E /* OYNavitionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYNavitionController.m; sourceTree = "<group>"; };
 		64BB87A31E05573D00F30A6E /* OYHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYHomeController.h; sourceTree = "<group>"; };
 		64BB87A41E05573D00F30A6E /* OYHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYHomeController.m; sourceTree = "<group>"; };
+		64BB87A61E055E5300F30A6E /* UIView+OYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+OYCategory.h"; sourceTree = "<group>"; };
+		64BB87A71E055E5300F30A6E /* UIView+OYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+OYCategory.m"; sourceTree = "<group>"; };
+		64BB87A91E0568A400F30A6E /* UIBarButtonItem+OYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+OYCategory.h"; sourceTree = "<group>"; };
+		64BB87AA1E0568A400F30A6E /* UIBarButtonItem+OYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+OYCategory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +124,8 @@
 		64BB87971E05539200F30A6E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6488A2051E0685EE000F10E5 /* OYNaviLeftItemView.h */,
+				6488A2061E0685EE000F10E5 /* OYNaviLeftItemView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,6 +154,10 @@
 		64BB879A1E05539200F30A6E /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				64BB87A61E055E5300F30A6E /* UIView+OYCategory.h */,
+				64BB87A71E055E5300F30A6E /* UIView+OYCategory.m */,
+				64BB87A91E0568A400F30A6E /* UIBarButtonItem+OYCategory.h */,
+				64BB87AA1E0568A400F30A6E /* UIBarButtonItem+OYCategory.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -240,6 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				64BB87811E05512200F30A6E /* AppDelegate.m in Sources */,
+				6488A2071E0685EE000F10E5 /* OYNaviLeftItemView.m in Sources */,
+				64BB87A81E055E5300F30A6E /* UIView+OYCategory.m in Sources */,
+				64BB87AB1E0568A400F30A6E /* UIBarButtonItem+OYCategory.m in Sources */,
 				64BB877E1E05512200F30A6E /* main.m in Sources */,
 				64BB87A51E05573D00F30A6E /* OYHomeController.m in Sources */,
 				64BB87A21E05572200F30A6E /* OYNavitionController.m in Sources */,
@@ -388,6 +406,7 @@
 				64BB87921E05512200F30A6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
