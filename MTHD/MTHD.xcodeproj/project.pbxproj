@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		640DD8A21E07F3380028ACA1 /* OYDistrictController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DD8A11E07F3380028ACA1 /* OYDistrictController.m */; };
+		640DD8A51E07F8730028ACA1 /* OYCitiesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DD8A41E07F8730028ACA1 /* OYCitiesController.m */; };
+		640DD8A81E080E160028ACA1 /* OYCitiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 640DD8A71E080E160028ACA1 /* OYCitiesModel.m */; };
+		640F41C51E08B3E500A1E0B1 /* OYSearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 640F41C41E08B3E500A1E0B1 /* OYSearchResultModel.m */; };
+		6410331F1E083E3200B24458 /* OYSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6410331E1E083E3200B24458 /* OYSearchResultController.m */; };
+		6413F35C1E07A19F00ACDF85 /* OYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6413F35B1E07A19F00ACDF85 /* OYPopoverController.m */; };
+		6413F3621E07A36400ACDF85 /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6413F35E1E07A36400ACDF85 /* categories.plist */; };
+		6413F3631E07A36400ACDF85 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6413F35F1E07A36400ACDF85 /* cities.plist */; };
+		6413F3641E07A36400ACDF85 /* cityGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6413F3601E07A36400ACDF85 /* cityGroups.plist */; };
+		6413F3651E07A36400ACDF85 /* sorts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6413F3611E07A36400ACDF85 /* sorts.plist */; };
+		6413F3681E07A6E600ACDF85 /* OYCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6413F3671E07A6E600ACDF85 /* OYCategoryModel.m */; };
+		6413F36B1E07AFD800ACDF85 /* OYPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6413F36A1E07AFD800ACDF85 /* OYPopoverView.m */; };
+		643A03DC1E08CB7100EC2732 /* OYConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 643A03DB1E08CB7100EC2732 /* OYConst.m */; };
+		643A03DF1E08F95500EC2732 /* OYDistrictModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 643A03DE1E08F95500EC2732 /* OYDistrictModel.m */; };
+		6448185C1E0952940022EF1D /* OYSortController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6448185B1E0952940022EF1D /* OYSortController.m */; };
+		6448185F1E0953430022EF1D /* OYSortModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6448185E1E0953430022EF1D /* OYSortModel.m */; };
 		6488A2071E0685EE000F10E5 /* OYNaviLeftItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6488A2061E0685EE000F10E5 /* OYNaviLeftItemView.m */; };
 		64BB877E1E05512200F30A6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BB877D1E05512200F30A6E /* main.m */; };
 		64BB87811E05512200F30A6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BB87801E05512200F30A6E /* AppDelegate.m */; };
@@ -15,9 +31,39 @@
 		64BB87A51E05573D00F30A6E /* OYHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BB87A41E05573D00F30A6E /* OYHomeController.m */; };
 		64BB87A81E055E5300F30A6E /* UIView+OYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BB87A71E055E5300F30A6E /* UIView+OYCategory.m */; };
 		64BB87AB1E0568A400F30A6E /* UIBarButtonItem+OYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 64BB87AA1E0568A400F30A6E /* UIBarButtonItem+OYCategory.m */; };
+		8E05060AD49E1CA57896DEAB /* libPods-MTHD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BB28EBDB9A0963CCCE6B959 /* libPods-MTHD.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BB28EBDB9A0963CCCE6B959 /* libPods-MTHD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTHD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		640DD8A01E07F3380028ACA1 /* OYDistrictController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYDistrictController.h; sourceTree = "<group>"; };
+		640DD8A11E07F3380028ACA1 /* OYDistrictController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYDistrictController.m; sourceTree = "<group>"; };
+		640DD8A31E07F8730028ACA1 /* OYCitiesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYCitiesController.h; sourceTree = "<group>"; };
+		640DD8A41E07F8730028ACA1 /* OYCitiesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYCitiesController.m; sourceTree = "<group>"; };
+		640DD8A61E080E160028ACA1 /* OYCitiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYCitiesModel.h; sourceTree = "<group>"; };
+		640DD8A71E080E160028ACA1 /* OYCitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYCitiesModel.m; sourceTree = "<group>"; };
+		640F41C31E08B3E500A1E0B1 /* OYSearchResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYSearchResultModel.h; sourceTree = "<group>"; };
+		640F41C41E08B3E500A1E0B1 /* OYSearchResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYSearchResultModel.m; sourceTree = "<group>"; };
+		6410331D1E083E3200B24458 /* OYSearchResultController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYSearchResultController.h; sourceTree = "<group>"; };
+		6410331E1E083E3200B24458 /* OYSearchResultController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYSearchResultController.m; sourceTree = "<group>"; };
+		6413F35A1E07A19F00ACDF85 /* OYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYPopoverController.h; sourceTree = "<group>"; };
+		6413F35B1E07A19F00ACDF85 /* OYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYPopoverController.m; sourceTree = "<group>"; };
+		6413F35E1E07A36400ACDF85 /* categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categories.plist; sourceTree = "<group>"; };
+		6413F35F1E07A36400ACDF85 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		6413F3601E07A36400ACDF85 /* cityGroups.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityGroups.plist; sourceTree = "<group>"; };
+		6413F3611E07A36400ACDF85 /* sorts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sorts.plist; sourceTree = "<group>"; };
+		6413F3661E07A6E600ACDF85 /* OYCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYCategoryModel.h; sourceTree = "<group>"; };
+		6413F3671E07A6E600ACDF85 /* OYCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYCategoryModel.m; sourceTree = "<group>"; };
+		6413F3691E07AFD800ACDF85 /* OYPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYPopoverView.h; sourceTree = "<group>"; };
+		6413F36A1E07AFD800ACDF85 /* OYPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYPopoverView.m; sourceTree = "<group>"; };
+		643A03DA1E08CB7100EC2732 /* OYConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYConst.h; sourceTree = "<group>"; };
+		643A03DB1E08CB7100EC2732 /* OYConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYConst.m; sourceTree = "<group>"; };
+		643A03DD1E08F95500EC2732 /* OYDistrictModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYDistrictModel.h; sourceTree = "<group>"; };
+		643A03DE1E08F95500EC2732 /* OYDistrictModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYDistrictModel.m; sourceTree = "<group>"; };
+		6448185A1E0952940022EF1D /* OYSortController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYSortController.h; sourceTree = "<group>"; };
+		6448185B1E0952940022EF1D /* OYSortController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYSortController.m; sourceTree = "<group>"; };
+		6448185D1E0953430022EF1D /* OYSortModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYSortModel.h; sourceTree = "<group>"; };
+		6448185E1E0953430022EF1D /* OYSortModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYSortModel.m; sourceTree = "<group>"; };
 		6488A2051E0685EE000F10E5 /* OYNaviLeftItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OYNaviLeftItemView.h; sourceTree = "<group>"; };
 		6488A2061E0685EE000F10E5 /* OYNaviLeftItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OYNaviLeftItemView.m; sourceTree = "<group>"; };
 		64BB87791E05512200F30A6E /* MTHD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTHD.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +81,8 @@
 		64BB87A71E055E5300F30A6E /* UIView+OYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+OYCategory.m"; sourceTree = "<group>"; };
 		64BB87A91E0568A400F30A6E /* UIBarButtonItem+OYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+OYCategory.h"; sourceTree = "<group>"; };
 		64BB87AA1E0568A400F30A6E /* UIBarButtonItem+OYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+OYCategory.m"; sourceTree = "<group>"; };
+		CFE60F5B99AAB976501957F1 /* Pods-MTHD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTHD.release.xcconfig"; path = "Pods/Target Support Files/Pods-MTHD/Pods-MTHD.release.xcconfig"; sourceTree = "<group>"; };
+		ED30EBC4CC6BB221DB6C643B /* Pods-MTHD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTHD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MTHD/Pods-MTHD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,17 +90,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E05060AD49E1CA57896DEAB /* libPods-MTHD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D25F47522A1A73E7B4DBA5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BB28EBDB9A0963CCCE6B959 /* libPods-MTHD.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6413F35D1E07A36400ACDF85 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				6413F35E1E07A36400ACDF85 /* categories.plist */,
+				6413F35F1E07A36400ACDF85 /* cities.plist */,
+				6413F3601E07A36400ACDF85 /* cityGroups.plist */,
+				6413F3611E07A36400ACDF85 /* sorts.plist */,
+			);
+			path = Plist;
+			sourceTree = "<group>";
+		};
 		64BB87701E05512200F30A6E = {
 			isa = PBXGroup;
 			children = (
 				64BB877B1E05512200F30A6E /* MTHD */,
 				64BB877A1E05512200F30A6E /* Products */,
+				A4B8B92844396CE690504C2C /* Pods */,
+				3D25F47522A1A73E7B4DBA5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +151,7 @@
 		64BB877C1E05512200F30A6E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6413F35D1E07A36400ACDF85 /* Plist */,
 				64BB877D1E05512200F30A6E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -110,6 +181,16 @@
 			children = (
 				64BB87A31E05573D00F30A6E /* OYHomeController.h */,
 				64BB87A41E05573D00F30A6E /* OYHomeController.m */,
+				6413F35A1E07A19F00ACDF85 /* OYPopoverController.h */,
+				6413F35B1E07A19F00ACDF85 /* OYPopoverController.m */,
+				640DD8A01E07F3380028ACA1 /* OYDistrictController.h */,
+				640DD8A11E07F3380028ACA1 /* OYDistrictController.m */,
+				640DD8A31E07F8730028ACA1 /* OYCitiesController.h */,
+				640DD8A41E07F8730028ACA1 /* OYCitiesController.m */,
+				6410331D1E083E3200B24458 /* OYSearchResultController.h */,
+				6410331E1E083E3200B24458 /* OYSearchResultController.m */,
+				6448185A1E0952940022EF1D /* OYSortController.h */,
+				6448185B1E0952940022EF1D /* OYSortController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -117,6 +198,16 @@
 		64BB87961E05539200F30A6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6413F3661E07A6E600ACDF85 /* OYCategoryModel.h */,
+				6413F3671E07A6E600ACDF85 /* OYCategoryModel.m */,
+				640DD8A61E080E160028ACA1 /* OYCitiesModel.h */,
+				640DD8A71E080E160028ACA1 /* OYCitiesModel.m */,
+				640F41C31E08B3E500A1E0B1 /* OYSearchResultModel.h */,
+				640F41C41E08B3E500A1E0B1 /* OYSearchResultModel.m */,
+				643A03DD1E08F95500EC2732 /* OYDistrictModel.h */,
+				643A03DE1E08F95500EC2732 /* OYDistrictModel.m */,
+				6448185D1E0953430022EF1D /* OYSortModel.h */,
+				6448185E1E0953430022EF1D /* OYSortModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -126,6 +217,8 @@
 			children = (
 				6488A2051E0685EE000F10E5 /* OYNaviLeftItemView.h */,
 				6488A2061E0685EE000F10E5 /* OYNaviLeftItemView.m */,
+				6413F3691E07AFD800ACDF85 /* OYPopoverView.h */,
+				6413F36A1E07AFD800ACDF85 /* OYPopoverView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +265,8 @@
 		64BB879C1E05539200F30A6E /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				643A03DA1E08CB7100EC2732 /* OYConst.h */,
+				643A03DB1E08CB7100EC2732 /* OYConst.m */,
 			);
 			path = Libs;
 			sourceTree = "<group>";
@@ -183,6 +278,15 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		A4B8B92844396CE690504C2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED30EBC4CC6BB221DB6C643B /* Pods-MTHD.debug.xcconfig */,
+				CFE60F5B99AAB976501957F1 /* Pods-MTHD.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,9 +294,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64BB87901E05512200F30A6E /* Build configuration list for PBXNativeTarget "MTHD" */;
 			buildPhases = (
+				58D181B51C8694ACAE1D7ED8 /* [CP] Check Pods Manifest.lock */,
 				64BB87751E05512200F30A6E /* Sources */,
 				64BB87761E05512200F30A6E /* Frameworks */,
 				64BB87771E05512200F30A6E /* Resources */,
+				983AE2AA4F99F1A5BFF0D7FA /* [CP] Embed Pods Frameworks */,
+				4AD3EDA487E33447A7F91F20 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,24 +350,88 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6413F3631E07A36400ACDF85 /* cities.plist in Resources */,
+				6413F3621E07A36400ACDF85 /* categories.plist in Resources */,
+				6413F3651E07A36400ACDF85 /* sorts.plist in Resources */,
 				64BB87891E05512200F30A6E /* Assets.xcassets in Resources */,
+				6413F3641E07A36400ACDF85 /* cityGroups.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AD3EDA487E33447A7F91F20 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTHD/Pods-MTHD-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58D181B51C8694ACAE1D7ED8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		983AE2AA4F99F1A5BFF0D7FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MTHD/Pods-MTHD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		64BB87751E05512200F30A6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				643A03DC1E08CB7100EC2732 /* OYConst.m in Sources */,
+				6448185F1E0953430022EF1D /* OYSortModel.m in Sources */,
+				640DD8A51E07F8730028ACA1 /* OYCitiesController.m in Sources */,
 				64BB87811E05512200F30A6E /* AppDelegate.m in Sources */,
 				6488A2071E0685EE000F10E5 /* OYNaviLeftItemView.m in Sources */,
 				64BB87A81E055E5300F30A6E /* UIView+OYCategory.m in Sources */,
 				64BB87AB1E0568A400F30A6E /* UIBarButtonItem+OYCategory.m in Sources */,
+				643A03DF1E08F95500EC2732 /* OYDistrictModel.m in Sources */,
 				64BB877E1E05512200F30A6E /* main.m in Sources */,
+				6410331F1E083E3200B24458 /* OYSearchResultController.m in Sources */,
+				6448185C1E0952940022EF1D /* OYSortController.m in Sources */,
+				6413F3681E07A6E600ACDF85 /* OYCategoryModel.m in Sources */,
+				6413F36B1E07AFD800ACDF85 /* OYPopoverView.m in Sources */,
+				640DD8A21E07F3380028ACA1 /* OYDistrictController.m in Sources */,
+				640F41C51E08B3E500A1E0B1 /* OYSearchResultModel.m in Sources */,
 				64BB87A51E05573D00F30A6E /* OYHomeController.m in Sources */,
 				64BB87A21E05572200F30A6E /* OYNavitionController.m in Sources */,
+				6413F35C1E07A19F00ACDF85 /* OYPopoverController.m in Sources */,
+				640DD8A81E080E160028ACA1 /* OYCitiesModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +456,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -333,6 +505,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -359,14 +532,28 @@
 		};
 		64BB87911E05512200F30A6E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED30EBC4CC6BB221DB6C643B /* Pods-MTHD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = VHCMRD88G8;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = MTHD/PrefixHeader.pch;
 				INFOPLIST_FILE = MTHD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-l\"YYModel\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.orangeYu.www.MTHD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -374,10 +561,12 @@
 		};
 		64BB87921E05512200F30A6E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE60F5B99AAB976501957F1 /* Pods-MTHD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = VHCMRD88G8;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = MTHD/PrefixHeader.pch;
 				INFOPLIST_FILE = MTHD/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

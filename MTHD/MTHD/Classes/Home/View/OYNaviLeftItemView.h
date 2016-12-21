@@ -13,5 +13,28 @@
 //** 点击button的block回调 */
 @property (copy, nonatomic) void(^OYNaviLeftItemViewBlock) ();
 
+/**
+ 设置icon
+ 
+ @param imageName icon
+ @param hlImageName 高亮icon
+ */
+- (void)setButtonIcon:(NSString *)imageName andHilightedImage:(NSString *)hlImageName;
+
+/**
+ 设置主标题
+
+ @param text 主标题内容
+ */
+- (void)setMainLabelText:(NSString *)text;
+
+/**
+ 设置副标题
+
+ @param text 副标题内容
+ */
+- (void)setSubLabelText:(NSString *)text;
+
+
 
 @end
