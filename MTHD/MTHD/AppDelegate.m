@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "OYNavitionController.h"
 #import "OYHomeController.h"
+#import <SVProgressHUD.h>
 
 @interface AppDelegate ()
 
@@ -24,9 +25,18 @@
     
     [_window makeKeyAndVisible];
     
+    [self setupSVProgressHud];
     return YES;
 }
 
+//MARK:- 设置SVProgressHUD默认样式
+- (void)setupSVProgressHud {
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
+    // 设置背景颜色
+    [SVProgressHUD setBackgroundColor:OYColor(21, 188, 173)];
+    // 设置字体颜色
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

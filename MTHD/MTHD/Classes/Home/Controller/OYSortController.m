@@ -65,10 +65,11 @@
 - (void)buttonClickAction:(UIButton *)sender {
     
     // 拿到当前点击的button的模型，获取当前点击的button的内容
-    NSString *currentLabel = self.sortModelList[sender.tag].label;
+//    NSString *currentLabel = self.sortModelList[sender.tag].label;
+    OYSortModel *model = self.sortModelList[sender.tag];
     
     // 发送通知，将点击的内容传至homeVc
-    [[NSNotificationCenter defaultCenter]postNotificationName:OYSortSelectedNotification object:nil userInfo:@{OYSelectedSortingName:currentLabel}];
+    [[NSNotificationCenter defaultCenter]postNotificationName:OYSortSelectedNotification object:nil userInfo:@{OYSelectedSortingName:model}];
     
 }
 

@@ -9,4 +9,7 @@ target 'MTHD' do
 
 pod 'Masonry'
 pod 'YYModel'
+pod 'SDWebImage'
+pod 'MJRefresh'
+pod 'SVProgressHUD'
 end
