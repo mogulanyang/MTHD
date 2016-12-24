@@ -14,15 +14,14 @@
 #import "OYSearchResultModel.h"
 #import "OYSortController.h"
 #import "OYCategoryModel.h"
-#import "OYHomeCell.h"
-#import "DPAPI.h"
-#import "OYHomeStatusModel.h"
 #import "OYSortModel.h"
-#import <MJRefresh.h>
-#import <SVProgressHUD.h>
 #import "AwesomeMenu.h"
+#import "OYDetailController.h"
+#import "OYSearchGrouponController.h"
+#import "OYNavitionController.h"
+#import <MJRefresh.h>
 
-@interface OYHomeController ()<DPRequestDelegate>
+@interface OYHomeController ()
 
 /** 当前选择的城市 */
 @property (copy, nonatomic) NSString *selectedCity;
@@ -39,24 +38,12 @@
 @property (weak, nonatomic) OYNaviLeftItemView *districtView;
 /** sortView */
 @property (weak, nonatomic) OYNaviLeftItemView *sortView;
-/** 首页团购数据模型数组 */
-@property (strong, nonatomic) NSMutableArray<OYHomeStatusModel *> *dealsList;
-/** 没有团购数据的默认图 */
-@property (strong, nonatomic) UIImageView *noGrouponView;
-
-/** 当前页数 */
-@property (assign, nonatomic) NSInteger currentPage;
-
-
 
 @end
 
 @implementation OYHomeController
 
 //MARK:- 初始化的时候设置flowLayout
-- (instancetype)init {
-    return [super initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc]init]];
-}
 
 static NSString * const reuseIdentifier = @"Cell";
 
@@ -66,40 +53,20 @@ static NSString * const reuseIdentifier = @"Cell";
     self.collectionView.backgroundColor = OYColor(222, 222, 222);
     
     self.selectedCity = @"北京";
-    // Register cell classes
-    [self.collectionView registerClass:[OYHomeCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    //MARK:- 设置默认页码
-    self.currentPage = 1;
     
     [self setupRightNavi];
     [self setupLeftNavi];
-    [self loadData];
     [self setupUI];
-    [self setupRefresh];
-}
 
-//MARK:- 设置上拉和下拉刷新
-- (void)setupRefresh {
-    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        self.currentPage = 1;
-        [self loadData];
-    }];
-    
-    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        self.currentPage++;
-        [self loadData];
-    }];
-    
+    //MARK:- 首次进入刷新页面
     [self.collectionView.mj_header beginRefreshing];
+
 }
 
-//MARK:- 加载网络数据
-- (void)loadData {
-    DPAPI *dpApi = [[DPAPI alloc]init];
-    [SVProgressHUD show];
-    NSString *urlStr = @"v1/deal/find_deals";
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+
+//MARK:- 重写父类设置请求参数方法,此处不要重写父类方法，因为需要走子类方法
+- (void)setRequestParams:(NSMutableDictionary *)params {
+    
     params[@"city"] = self.selectedCity;
     if (self.selectedCategoty) {
         params[@"category"] = self.selectedCategoty;
@@ -110,10 +77,6 @@ static NSString * const reuseIdentifier = @"Cell";
     if (self.selectedSorting) {
         params[@"sort"] = self.selectedSorting;
     }
-    params[@"page"] = @(self.currentPage);
-    NSLog(@"请求参数为%@",params);
-    [dpApi requestWithURL:urlStr params:params delegate:self];
-    
 }
 
 //MARK:- 设置导航栏左侧按钮
@@ -166,52 +129,6 @@ static NSString * const reuseIdentifier = @"Cell";
     UIBarButtonItem *searchButton = [UIBarButtonItem itemWithImage:@"icon_search" andTarget:self andAction:@selector(searchButton)];
     searchButton.customView.width = 60;
     self.navigationItem.rightBarButtonItems = @[locationButton,searchButton];
-}
-
-//MARK:- DPRequestDelegate
-// 请求失败
-- (void)request:(DPRequest *)request didFailWithError:(NSError *)error {
-    NSLog(@"请求失败,错误原因---%@",error);
-    //MARK:- 数据加载失败停止刷新
-    [self.collectionView.mj_header endRefreshing];
-    [self.collectionView.mj_footer endRefreshing];
-    
-    [SVProgressHUD showErrorWithStatus:@"请求失败"];
-}
-// 请求成功
-- (void)request:(DPRequest *)request didFinishLoadingWithResult:(id)result {
-    NSLog(@"请求成功");
-//    NSLog(@"%@",result);
-    NSDictionary *responseDic = result;
-    NSArray *dealsArray = responseDic[@"deals"];
-    [SVProgressHUD dismiss];
-    //MARK:- 通过判断上拉刷新和下拉刷新对数组进行处理
-    if (self.currentPage == 1) {
-        [self.dealsList removeAllObjects];
-    }
-    [self.dealsList addObjectsFromArray: [NSArray yy_modelArrayWithClass:[OYHomeStatusModel class] json:dealsArray]];
-
-    //MARK:- 根据数据的有无判断没有团购的图像是否显示
-    self.noGrouponView.hidden = !(self.dealsList.count == 0);
-
-    //MARK:- 数据加载成功停止刷新
-    [self.collectionView.mj_header endRefreshing];
-    [self.collectionView.mj_footer endRefreshing];
-    
-    [self.collectionView reloadData];
-//    NSLog(@"%@",dealsArray);
-
-}
-//MARK:- collectionViewDatasource
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.dealsList.count;
-}
-
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    OYHomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.dealsModel = self.dealsList[indexPath.item];
-    cell.backgroundColor = [UIColor whiteColor];
-    return cell;
 }
 
 //MARK:- 导航栏相关点击事件
@@ -268,20 +185,19 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void)searchButton {
-    NSLog(@"点击了搜索");
+    OYSearchGrouponController *sgVc = [[OYSearchGrouponController alloc]init];
+    [self presentViewController:[[OYNavitionController alloc] initWithRootViewController:sgVc] animated:true completion:nil];
+    sgVc.selectedCity = self.selectedCity;
+    [sgVc setOYSearchGrouponControllerBlock:^{
+        [self dismissViewControllerAnimated:true completion:nil];
+    }];
+    
 }
 //MARK:- 设置子控件布局
 - (void)setupUI {
     [self handleNotification];
     [self setupAwesomeMenu];
-    [self viewWillTransitionToSize:[UIScreen mainScreen].bounds.size withTransitionCoordinator:self.transitionCoordinator];
     
-    //MARK:- 添加没有团购的图片，默认隐藏
-    [self.view addSubview:self.noGrouponView];
-    self.noGrouponView.hidden = true;
-    [self.noGrouponView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.collectionView);
-    }];
 }
 
 - (void)setupAwesomeMenu{
@@ -316,26 +232,6 @@ static NSString * const reuseIdentifier = @"Cell";
     }];
 }
 
-//MARK:- 设置cell的布局
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
-    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
-    
-    flowLayout.itemSize = CGSizeMake(305, 305);
-    
-    int col = 0;
-    CGFloat margin = 0;
-    if (size.width > size.height) {
-        // 横屏
-        col = 3;
-    }else {
-        // 竖屏
-        col = 2;
-    }
-    margin = (size.width - col * flowLayout.itemSize.width) / (col + 1);
-
-    flowLayout.minimumLineSpacing = margin;
-    flowLayout.sectionInset = UIEdgeInsetsMake(margin, margin, margin, margin);
-}
 
 - (void)handleNotification {
     //MARK:- 添加监听者接收通知
@@ -430,19 +326,5 @@ static NSString * const reuseIdentifier = @"Cell";
     [self dismissViewControllerAnimated:true completion:nil];
 }
 
-//MARK:- 数据懒加载
-- (NSArray<OYHomeStatusModel *> *)dealsList {
-    if (!_dealsList) {
-        _dealsList = [[NSMutableArray alloc]init];
-    }
-    return _dealsList;
-}
 
-- (UIImageView *)noGrouponView {
-    if (!_noGrouponView) {
-        _noGrouponView = [[UIImageView alloc]init];
-        _noGrouponView.image = [UIImage imageNamed:@"icon_deals_empty"];
-    }
-    return _noGrouponView;
-}
 @end

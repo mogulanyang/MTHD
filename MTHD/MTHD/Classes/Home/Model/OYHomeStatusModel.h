@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OYRestrictionsModel.h"
 
 @interface OYHomeStatusModel : NSObject
 
@@ -51,5 +52,8 @@
 
 /** 团购单的截止购买日期*/
 @property (copy, nonatomic) NSString *purchase_deadline;
+
+/** 团购退换限制 */
+@property (strong, nonatomic) OYRestrictionsModel *restrictions;
 
 @end

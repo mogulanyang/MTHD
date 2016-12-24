@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OYBaseGrouponController.h"
 
-@interface OYHomeController : UICollectionViewController
+@interface OYHomeController : OYBaseGrouponController
 
 @end
